@@ -1,0 +1,83 @@
+.my-plants-header {
+    background: #bfd1ae46 0% 0% no-repeat padding-box;
+    backdrop-filter:  blur(2px);
+}
+
+main {
+    width: 100vw;
+    height: 90vh;
+}
+
+.plants {
+    width: 100%;
+    height: 100%;
+    padding: 4em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+
+ main>.plants>div  {
+    background: #fbf7f59f 0% 0% no-repeat padding-box;
+    margin: 1em;
+    border-radius: 44px;
+
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    /* grid-template-columns: repeat(4, 1fr); */
+    align-items: center;
+    justify-items: center;
+    vertical-align: middle;
+ }
+
+ main>.plants>div>#img {
+    grid-row: 2/7;
+    width: 70%;
+    height: 90%;
+    
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    align-items: center;
+    justify-items: center;
+    vertical-align: middle;
+}
+
+main>.plants>div>#img>img {
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: transparent url('https://www.ikea.com/pl/pl/images/products/fejka-sztuczna-roslina-doniczkowa-do-wewnatrz-na-zewnatrz-monstera__0990297_pe819189_s5.jpg') 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #291D164D;
+    border: 2px solid #1D3811BD;
+
+}
+
+main>.plants>div>#plantname {
+    grid-row: 7/10;
+    height: 50%;
+    width: 70%;
+    background: #29401578 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #707070c0;
+    border-radius: 0.5em;
+    text-align: center;
+    font: normal normal normal 20px/37px Ink Free;
+    letter-spacing: 1.2px;
+    color: #FEF3EC;
+
+
+
+}
+
+
+
+
+
+
+

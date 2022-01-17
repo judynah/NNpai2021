@@ -1,0 +1,189 @@
+/* body {
+    margin: 0px;
+    background: transparent linear-gradient(180deg, #FEF3EC 0%, #DCCEC5 100%) 0% 0% no-repeat padding-box;
+
+} */
+/* .container {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255, 0.3);
+    background-position:center;
+    border-radius: 200px;
+} */
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: transparent linear-gradient(180deg, #FEF3EC 0%, #cec0b8 100%) 0% 0% no-repeat padding-box;
+    
+    display: grid;
+    grid-template-columns: [first] 5% [line2] 90% [line3] 5%  [end];
+    grid-template-rows: [row1-start] 5% [row1] 90% [row1-end] 5% [end];
+
+}
+
+
+.monstera-background { 
+
+    width: 100%;
+    height: 100%;
+    grid-row-start: 2;
+    grid-row-end: span ;
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    
+    background-image: url(../img/monstera.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    border-radius: 100px;
+
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.monstera-container {
+    height: 100%;
+    width: 100%;
+    background: rgba(233, 204, 196, 0.5);
+    border-radius: 100px;
+
+    display: grid;
+    grid-template-columns: [first] 50% [line2] 40% [line3] 10%  [end];
+    grid-template-rows: [row1-start] 25% [row1] 50% [row1-end] 25% [end];
+
+    /* backdrop-filter:  blur(1px); */
+    
+}
+
+.logo-container {
+   
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    grid-row-start: 2;
+    grid-row-end: span 1;
+    align-self: center;
+    justify-self: right;
+
+    backdrop-filter: blur(3px);
+    border-radius: 70px;
+    height: 30%;
+    width: 80%;
+
+
+
+}
+
+.logo {
+    text-align: center;
+    justify-items: center;
+    vertical-align: middle;
+    font: normal normal normal 110px/170px Hontizema;
+    letter-spacing: 7.2px;
+    color: #273B16;
+    opacity: 1;
+    width: 100%;
+    height: 100%;;
+}
+
+.login-container {
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    grid-row-start: 2;
+    grid-row-end: span 1;
+    
+
+    width: 100%;
+    height: 100%;
+    background: #fffaf6c2 0% 0% no-repeat padding-box;
+    border: 6px solid #313D2AA1;
+    border-radius: 50px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    /* padding: 5% 2% 5% 2%; */
+    /* opacity: 0.96; */
+
+}
+
+
+
+form.form-login {
+    /* margin: 20% 10% 20% 10%; */
+    
+    grid-column: 2/8;
+    grid-row: 2/8;
+
+
+    align-items: center;
+    justify-items: center;
+    
+}
+
+button {
+    
+    background: transparent linear-gradient(180deg, #36431CC9 0%, #35411A96 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #212B13;
+    border-radius: 3px;
+    width: 100%;
+    height: 20%;
+    border: none;
+    color: white;
+    
+    /* margin: 0.5em;
+    line-height: 2em; */
+    
+
+    text-align: center;
+    font: normal normal normal 20px/20px Ink Free;
+    letter-spacing: 0px;
+    color: #FBFBFB;
+     
+}
+
+
+
+
+input {
+ 
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid grey;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
+    height: 20%;
+    text-align: left;
+    font: normal normal normal 20px/20px Ink Free;
+    letter-spacing: 0px;
+    color: #707070;
+}
+
+
+
+
+
+
+/* @media only screen and (max-device-width: 420px){
+    .container{
+        flex-direction: column;
+    }
+
+    * {
+        font-size: 36px;
+    }
+
+    .login-container {
+        width: 100%;
+    }
+
+    form {
+        margin: auto;
+    }
+} */
+
