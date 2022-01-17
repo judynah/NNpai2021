@@ -47,19 +47,12 @@
         <main>
             <section class="plant-introduction">
                 <div class="plant-introduction-photo">
-                    <div class="messages">
-                        <?php
-                        if(isset($messages)){
-                            foreach($messages as $message) {
-                                echo $message;
-                            }
-                        }
-                        ?>
-                    </div>
-                    <form action="addPlantPhoto" method="POST" ENCTYPE="multipart/form-data">
-                        <input type="file" name="plant_img_file">
-                        <button type="submit">send</button>
-                    </form>
+
+<!--                    </div>-->
+<!--                    <form action="addPlantPhoto" method="POST" ENCTYPE="multipart/form-data">-->
+<!--                        <input type="file" name="plant_img_file">-->
+<!--                        <button type="submit">send</button>-->
+<!--                    </form>-->
                 </div>
 <!--                <img src="../img/plants/pl1.jpg">-->
                 <div class="plant-name">plant_name</div>
