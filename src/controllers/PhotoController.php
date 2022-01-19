@@ -1,6 +1,7 @@
 <?php
 
 require_once 'AppController.php';
+require_once __DIR__.'/../models/Plant.php';
 
 class PhotoController extends AppController
 {
@@ -18,9 +19,10 @@ class PhotoController extends AppController
                 dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['plant_img_file']['name']
             );
             // TODO create new project object and save it in database
-//            $project = new Project($_POST['title'], $_POST['description'], $_FILES['file']['name']);
+            $plant = new Plant($_POST['title'], $_POST['description'], $_FILES['plant_img_file']['name']);
 
-            return $this->render('treatment', ['messages' => $this->message]);
+            return $this->render('treatment', ['messages' => $this->message, 'plant'=> $plant]);
+
         }
         return $this->render('addPhoto', ['messages' => $this->message]);
     }
