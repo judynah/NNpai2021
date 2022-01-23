@@ -21,11 +21,7 @@ class  DefaultController extends AppController {
 //        die("main_page method");
     }
 
-    public function project_my_plants(){
-        // TODO display project_my_plants.php
-        $this->render('project_my_plants');
-//        die("index method");
-    }
+
 
     public function society(){
         // TODO display society.php
