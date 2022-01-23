@@ -2,14 +2,16 @@
 
 class Plant
 {
+    private $id_plant;
     private $name;
-    private $species;
+    private $id_plant_data;
+    private $id_plant_history;
     private $image;
+    private $id_user;
 
-    public function __construct($name, $species, $image)
+    public function __construct($name,$image)
     {
         $this->name = $name;
-        $this->species = $species;
         $this->image = $image;
     }
 
@@ -27,15 +29,6 @@ class Plant
         $this->name = $name;
     }
 
-    public function getSpecies() :string
-    {
-        return $this->species;
-    }
-
-    public function setSpecies($species)
-    {
-        $this->species = $species;
-    }
 
     public function getImage() :string
     {
