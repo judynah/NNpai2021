@@ -9,9 +9,9 @@ $path = parse_url( $path, PHP_URL_PATH);
 Routing::get('', 'DefaultController');
 Routing::get('main_page', 'DefaultController');
 Routing::post('login', 'SecurityController');
-Routing::post('addPhoto', 'PhotoController');
+Routing::post('addPhoto', 'ProjectController');
 
-Routing::get('project_my_plants', 'DefaultController');
+Routing::get('project_my_plants', 'PlantController');
 Routing::get('society', 'DefaultController');
 Routing::get('treatment', 'DefaultController');
 
