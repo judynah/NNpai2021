@@ -56,7 +56,7 @@ class PlantController extends AppController
     public function project_my_plants(){
         // display project_my_plants.php
 
-        $plants = $this->plantRepository->getPlant();
+        $plants = $this->plantRepository->getPlants();
 
         $this->render('project_my_plants', ['plants'=> $plants]);
 //        die("index method");

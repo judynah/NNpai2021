@@ -54,8 +54,8 @@
 <!--                        <button type="submit">send</button>-->
 <!--                    </form>-->
                 </div>
-                <img src="public/uploads/<?= $plant->getImage() ?>">
-                <div class="plant-name"><?= $plant->getName()?></div>
+<!--                <img src="public/uploads/--><?//= $plant->getImage() ?><!--">-->
+<!--                <div class="plant-name">--><?//= $plant->getName()?><!--</div>-->
             </section>
 
             <section class="plant-planned-action">
