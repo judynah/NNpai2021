@@ -31,7 +31,9 @@ class PlantController extends AppController
             $plant = new Plant($_POST['name'], $_FILES['plant_img_file']['name']);
             $this->plantRepository->addPlant($plant);
 
-            return $this->render('treatment', ['messages' => $this->message, 'plant'=> $plant]);
+            return $this->render('project_my_plants', [
+                'plants' => $this->plantRepository->getPlants(),
+                'messages' => $this->message, 'plant'=> $plant]);
 
         }
         return $this->render('addPlant', ['messages' => $this->message]);
@@ -51,5 +53,12 @@ class PlantController extends AppController
         return true;
     }
 
+    public function project_my_plants(){
+        // display project_my_plants.php
 
+        $plants = $this->plantRepository->getPlant();
+
+        $this->render('project_my_plants', ['plants'=> $plants]);
+//        die("index method");
+    }
 }
