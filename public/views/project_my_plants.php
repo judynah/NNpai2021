@@ -44,16 +44,18 @@
 
         <main>
             <section class="plants">
+                <?php
+                    foreach ($plants as $plant): ?>
                 <div id="plant1">
                     <div id="img">
-                        <img>
-                        <!-- <img src="../img/plants/pl1.jpg"> -->
+                         <img src="public/uploads/<?=$plant->getImage() ?>" >
                     </div>                    
                     <div id="plantname">
-                        plantName
+                        <?= $plant->getName(); ?>
                     </div>
 
                 </div>
+                <?php endforeach; ?>
 
                 <div> plant2 </div>
                 <div> plant3 </div>

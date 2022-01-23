@@ -43,4 +43,22 @@ class PlantRepository
         ]);
     }
 
+    public function getPlants(): array
+    {
+        $result = [];
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM public."Plants"
+        ');
+        $stmt->execute();
+        $plants = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach($plants as $plant){
+            $result = new Plant(
+                $plant['name'],
+                $plant['image']
+            );
+        }
+        return $result;
+    }
+
 }
