@@ -3,17 +3,17 @@
 require_once 'AppController.php';
 
 class  DefaultController extends AppController {
-    public function index(){
-        // display login.php
-        $this->render('login');
-//        die("index method");
-    }
+//    public function index(){
+//        // display login.php
+//        $this->render('login');
+////        die("index method");
+//    }
 
-    public function login(){
-        // display login.php
-        $this->render('login');
-//        die("login method");
-    }
+//    public function login(){
+//        // display login.php
+//        $this->render('login');
+////        die("login method");
+//    }
 
     public function main_page(){
         // display main_page.php
