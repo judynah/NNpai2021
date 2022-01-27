@@ -35,4 +35,24 @@ class  DefaultController extends AppController {
         // display signup.php
         $this->render('signup');
     }
+
+    public function settings(){
+        // display settings.php
+        $this->render('settings');
+    }
+
+    public function add_plant(){
+        // display settings.php
+        $this->render('add_plant');
+    }
+
+    public function ask_for_advice(){
+        // display settings.php
+        $this->render('ask_for_advice');
+    }
+    public function give_plant(){
+        // display settings.php
+        $this->render('give_plant');
+    }
+
 }
