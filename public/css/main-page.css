@@ -8,40 +8,42 @@
 
 main {
  
-    width: 100%;
+    width: 100vw;
     height: 90vh;
+
     display: grid;
     /* grid-template-columns: repeat(4, 1fr); */
+
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    padding-left: 2vw ;
+    padding-right: 2vw;
+
     display: grid;
-    grid-template-columns: [first] 5% [line2] 44% [line3] 2% [line4] 44% [col4-start] 5% [end];
-    grid-template-rows: [row1-start] 8% [row1] 10% [row1-end] 2% [third-line] auto [last-line] 10% [end];
-    /* grid-template-columns: repeat(2, 1fr); */
-    column-span: 10;
-    
-    /* grid-gap: 2em;
-    padding: 3em;
-    overflow: auto;
-    grid-auto-rows: minmax(100px, auto);
-     */
+    grid-template-columns: [first] 48% [line3] 2% [line4] 48% [end];
+    grid-template-rows: [row1-start] 10% [row1] 2% [row1-end] 88% [end];
+
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
 
 }
 
 .upcoming-treatment-header{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
     grid-row-end: span 1;
 
     background: #FEF3EC 0% 0% no-repeat padding-box;
     border-radius: 35px;
     
-    
 }
 
 .last-actions-header {
-    grid-column-start: 4;
-    grid-column-end: 4;
-    grid-row-start: 2;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
     grid-row-end: span 1;
 
     background: #E9DCD4 0% 0% no-repeat padding-box;
@@ -50,9 +52,9 @@ main {
 }
 
 .upcoming-treatment{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 4;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
     grid-row-end: span 1;
 
     background: #FEF3EC 0% 0% no-repeat padding-box;
@@ -63,9 +65,9 @@ main {
 }
 
 .last-actions{
-    grid-column-start: 4;
-    grid-column-end: 4;
-    grid-row-start: 4;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 3;
     grid-row-end: span 1;
 
     background: #E9DCD4 0% 0% no-repeat padding-box;

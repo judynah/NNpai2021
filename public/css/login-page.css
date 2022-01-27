@@ -1,25 +1,8 @@
-/* body {
-    margin: 0px;
-    background: transparent linear-gradient(180deg, #FEF3EC 0%, #DCCEC5 100%) 0% 0% no-repeat padding-box;
-
-} */
-/* .container {
-    width: 100vw;
-    height: 10vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255,255,255, 0.3);
-    background-position:center;
-    border-radius: 200px;
-} */
-
 .container {
     width: 100vw;
     height: 100vh;
     background: transparent linear-gradient(180deg, #FEF3EC 0%, #cec0b8 100%) 0% 0% no-repeat padding-box;
-    
+
     display: grid;
     grid-template-columns: [first] 5% [line2] 90% [line3] 5%  [end];
     grid-template-rows: [row1-start] 5% [row1] 90% [row1-end] 5% [end];
@@ -27,20 +10,20 @@
 }
 
 
-.monstera-background { 
+.monstera-background {
 
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     grid-row-start: 2;
     grid-row-end: span ;
     grid-column-start: 2;
     grid-column-end: span 1;
-    
+
     background-image: url(../img/monstera.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    
-    /*border-radius: 10vh;*/
+
+    border-radius: 100px;
 
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -54,15 +37,15 @@
     border-radius: 100px;
 
     display: grid;
-    grid-template-columns: [first] 50% [line2] 40% [line3] 10%  [end];
-    grid-template-rows: [row1-start] 25% [row1] 50% [row1-end] 25% [end];
+    grid-template-columns: [first] 40% [line2] 50% [line3] 10% [end];
+    grid-template-rows: [row1-start] 15% [row1] 70% [row1-end] 15% [end];
 
     /* backdrop-filter:  blur(1px); */
-    
+
 }
 
 .logo-container {
-   
+
     grid-column-start: 1;
     grid-column-end: span 1;
     grid-row-start: 2;
@@ -75,15 +58,13 @@
     height: 30%;
     width: 80%;
 
-
-
 }
 
 .logo {
     text-align: center;
     justify-items: center;
     vertical-align: middle;
-    font: normal normal normal 8vw/10vw Hontizema;
+    font: normal normal normal 6vw/12vw Hontizema;
     letter-spacing: 7.2px;
     color: #273B16;
     opacity: 1;
@@ -96,82 +77,93 @@
     grid-column-end: span 1;
     grid-row-start: 2;
     grid-row-end: span 1;
-    
+
 
     width: 100%;
     height: 100%;
     background: #fffaf6c2 0% 0% no-repeat padding-box;
     border: 6px solid #313D2AA1;
     border-radius: 50px;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    /* padding: 5% 2% 5% 2%; */
-    /* opacity: 0.96; */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    vertical-align: center;
 
 }
 
 
 
 form.form-login {
-    /* margin: 20% 10% 20% 10%; */
-    
-    grid-column: 2/8;
-    grid-row: 2/8;
-
-
-    align-items: center;
+    /*display: grid;*/
+    /*grid-template-columns: repeat(11, 1fr);*/
+    /*grid-template-rows: repeat(10, 1fr);*/
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    vertical-align: center;
     justify-items: center;
-    
+    align-items: center;
+
+    padding: 10px;
+
 }
+
 
 button {
-    
+    /*grid-row: 9/10;*/
+    /*grid-column: 2/11;*/
+
     background: transparent linear-gradient(180deg, #36431CC9 0%, #35411A96 100%) 0% 0% no-repeat padding-box;
     border: 1px solid #212B13;
-    border-radius: 3px;
-    width: 100%;
-    height: 20%;
+    border-radius: 4px;
+    width: 38vw;
+    height: 7vh;
     border: none;
     color: white;
-    
+    padding: 10px;
+    margin: 1vh;
+
     /* margin: 0.5em;
     line-height: 2em; */
-    
-
     text-align: center;
-    font: normal normal normal 20px/20px Ink Free;
+    font: normal normal normal 23px/23px Ink Free;
     letter-spacing: 0px;
     color: #FBFBFB;
-     
 }
-
-
-
-
 input {
- 
+
     background-color: transparent;
     border: none;
     border-bottom: 1px solid grey;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    width: 100%;
-    height: 20%;
+    /*margin-top: 2%;*/
+    /*margin-bottom: 2%;*/
+    width: 38vw;
+    height: 7vh;
     text-align: left;
     font: normal normal normal 20px/20px Ink Free;
     letter-spacing: 0px;
     color: #707070;
+    margin: 1vh;
+
 }
 
+@media only screen and (max-device-width: 420px){
 
+    .monstera-container{
+        grid-template-columns: [first] 10% [line2] 80% [line3] 10% [end];
+        grid-template-rows: [row1-start] 10% [row1] 15% [row2] 65% [row1-end] 10% [end];
+    }
 
-
-
-
-/* @media only screen and (max-device-width: 420px){
-    .container{
-        flex-direction: column;
+    .logo-container {
+        grid-column-start: 2;
+        grid-column-end: span 1;
+        grid-row-start: 2;
+        grid-row-end: span 1;
+    }
+    .logo{
+        font: normal normal normal 20px/20px "Comic Sans MS"; ;
     }
 
     * {
@@ -185,5 +177,5 @@ input {
     form {
         margin: auto;
     }
-} */
+}
 

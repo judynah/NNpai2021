@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/login-page-signup.css">
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/login-page-signup.css?<?php echo time(); ?>">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css?<?php echo time(); ?>">
     <title>Sign up</title>
 </head>
 

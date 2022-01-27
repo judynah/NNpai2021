@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/addPlant.css?<?php echo time(); ?>">
+    <link rel="stylesheet" type="text/css" href="public/css/add-plant.css?<?php echo time(); ?>">
     <link rel="stylesheet" type="text/css" href="public/css/style.css?<?php echo time(); ?>">
     <script src="https://kit.fontawesome.com/a15f7b587f.js" crossorigin="anonymous"></script>
     <title>AddPlant</title>
@@ -49,7 +49,7 @@
         <header class="addPlant-header"> Add New Plant </header>
 
         <section class="add-container">
-            <form class="login">
+            <form class="add-plant-form">
                 <div id="add-content">
                     <!--                    <div class="messages">-->
                     <!--                        --><?php

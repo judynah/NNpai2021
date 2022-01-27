@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/main-page.css">
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/main-page.css?<?php echo time(); ?>">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css?<?php echo time(); ?>">
     <script src="https://kit.fontawesome.com/a15f7b587f.js" crossorigin="anonymous"></script>
     <title>MAIN PAGE</title>
 </head>
