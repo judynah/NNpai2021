@@ -10,6 +10,8 @@ Routing::get('', 'DefaultController');
 Routing::get('main_page', 'DefaultController');
 Routing::post('login', 'SecurityController');
 Routing::post('signup', 'DefaultController');
+Routing::post('settings', 'DefaultController');
+Routing::post('addPlant', 'DefaultController');
 Routing::post('addPhoto', 'ProjectController');
 
 Routing::get('project_my_plants', 'PlantController');
