@@ -13,7 +13,8 @@ class UserRepository extends Repository
          ');
 
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-        $stmt->execute(var_dump($stmt->fetch()));
+//        $stmt->execute(var_dump($stmt->fetch()));
+        $stmt->execute();
 
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
