@@ -31,10 +31,10 @@ class  DefaultController extends AppController {
         $this->render('treatment');
     }
 
-    public function signup(){
-        // display signup.php
-        $this->render('signup');
-    }
+//    public function signup(){
+//        // display signup.php
+//        $this->render('signup');
+//    }
 
     public function settings(){
         // display settings.php

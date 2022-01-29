@@ -72,7 +72,7 @@
     height: 100%;;
 }
 
-.login-container {
+.signup-container {
     grid-column-start: 2;
     grid-column-end: span 1;
     grid-row-start: 2;
@@ -94,7 +94,7 @@
 
 
 
-form.form-login {
+form.form-signup {
      /*margin: 7vh 3vw 7vh 3vw;*/
 
     /*grid-column: 2/8;*/

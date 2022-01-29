@@ -50,17 +50,17 @@
 
         <section class="settings-container">
             <div id="content">
-                <form class="login">
+                <form class="settings">
 
-<!--                    <div class="messages">-->
-<!--                        --><?php
-//                        if(isset($messages)){
-//                            foreach($messages as $message) {
-//                                echo $message;
-//                            }
-//                        }
-//                        ?>
-<!--                    </div>-->
+                    <div class="messages">
+                        <?php
+                        if(isset($messages)){
+                            foreach($messages as $message) {
+                                echo $message;
+                            }
+                        }
+                        ?>
+                    </div>
 
                         <div class="settings-personal-data-container">
                             <h1> Personal data </h1>
@@ -120,11 +120,11 @@
                             <ul>
                                 <li>
                                     <h2> New Password</h2>
-                                    <input id="setting-password" type="text" placeholder="password">
+                                    <input id="setting-password" type="password" placeholder="password">
                                 </li>
                                 <li>
                                     <h2>Confirm password</h2>
-                                    <input id="setting-confirm-password" type="text" placeholder="conform-password">
+                                    <input id="setting-confirm-password" type="password" placeholder="conform-password">
                                 </li>
                                 <li>
                                     <button type="submit" value="settings">Update</button>

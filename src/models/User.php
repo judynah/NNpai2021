@@ -4,15 +4,154 @@ class User
 {
     private $email ;
     private $password;
+
     private $name;
     private $surname;
+    private $dateOfBirth;
+    private $city;
+    private $postcode;
+    private $street;
+    private $houseNumber;
+    private $apartmentNumber;
+    private $phoneNumber;
+//    private $idUserInfo;
 
-    public function __construct(string $login,string $password)
+    public function __construct(string $login,string $password, string $name, string $surname)
     {
         $this->email = $login;
         $this->password = $password;
+        $this->name= $name;
+        $this->surname = $surname;
     }
 
+//
+//    /**
+//     * @return mixed
+//     */
+//    public function getIdUserInfo()
+//    {
+//        return $this->idUserInfo;
+//    }
+//
+//    /**
+//     * @param mixed $idUserInfo
+//     */
+//    public function setIdUserInfo($idUserInfo): void
+//    {
+//        $this->idUserInfo = $idUserInfo;
+//    }
+//
+//    /**
+//     * @return mixed
+//     */
+    public function getDateOfBirth()
+    {
+        return $this->dateOfBirth;
+    }
+
+    /**
+     * @param mixed $dateOfBirth
+     */
+    public function setDateOfBirth($dateOfBirth): void
+    {
+        $this->dateOfBirth = $dateOfBirth;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * @param mixed $city
+     */
+    public function setCity($city): void
+    {
+        $this->city = $city;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPostcode()
+    {
+        return $this->postcode;
+    }
+
+    /**
+     * @param mixed $postcode
+     */
+    public function setPostcode($postcode): void
+    {
+        $this->postcode = $postcode;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStreet()
+    {
+        return $this->street;
+    }
+
+    /**
+     * @param mixed $street
+     */
+    public function setStreet($street): void
+    {
+        $this->street = $street;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getHouseNumber()
+    {
+        return $this->houseNumber;
+    }
+
+    /**
+     * @param mixed $houseNumber
+     */
+    public function setHouseNumber($houseNumber): void
+    {
+        $this->houseNumber = $houseNumber;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getApartmentNumber()
+    {
+        return $this->apartmentNumber;
+    }
+
+    /**
+     * @param mixed $apartmentNumber
+     */
+    public function setApartmentNumber($apartmentNumber): void
+    {
+        $this->apartmentNumber = $apartmentNumber;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPhoneNumber()
+    {
+        return $this->phoneNumber;
+    }
+
+    /**
+     * @param mixed $phoneNumber
+     */
+    public function setPhoneNumber($phoneNumber): void
+    {
+        $this->phoneNumber = $phoneNumber;
+    }
 
     public function getEmail()
     {

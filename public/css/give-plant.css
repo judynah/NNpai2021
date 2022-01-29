@@ -79,7 +79,18 @@ li > input {
     color: rgba(233, 220, 212, 0.58);
 }
 
-li > #give-message, li > #ask-for-advice-message {
+li > textarea {
+    margin-left: auto;
+    margin: 1.5vh;
+    width: 20vw;
+    height: 3vw;
+    border-radius: 15px;
+    padding-left: 1vw;
+    font: normal normal normal 1.2vw/1.5vw Ink Free;
+    letter-spacing: 0px;
+    border: none;
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.71);
+    color: rgba(233, 220, 212, 0.58);
     height: 5vw;
 }
 

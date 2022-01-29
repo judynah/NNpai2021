@@ -66,8 +66,8 @@
                             <input id="ask-for-advice-name" type="text" placeholder="write plant's name">
                         </li>
                         <li>
-                            <h1> Message </h1>
-                            <input id="ask-for-advice-message" type="text" placeholder="write a message">
+                            <h1> Description </h1>
+                            <textarea name="ask-for-advice-description" rows=3 placeholder="description"></textarea>
                         </li>
                         <li>
                             <h1> Due date </h1>

@@ -3,7 +3,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/project-my-plants.css?<?php echo time(); ?>">
     <link rel="stylesheet" type="text/css" href="public/css/style.css?<?php echo time(); ?>">
     <script src="https://kit.fontawesome.com/a15f7b587f.js" crossorigin="anonymous"></script>
-    <title> MY PLANTS</title>
+    <title> My Plants</title>
 </head>
 <body>
     <div class ="base-container">
@@ -44,11 +44,10 @@
 
         <main>
             <section class="plants">
-                <?php
-                    foreach ($plants as $plant): ?>
+                <?php foreach($plants as $plant): ?>
                 <div id="plant1">
                     <div id="img">
-                         <img src="public/uploads/<?=$plant->getImage() ?>" >
+                         <img src="public/uploads/<?=$plant->getImage(); ?>" >
                     </div>                    
                     <div id="plantname">
                         <?= $plant->getName(); ?>
@@ -57,13 +56,13 @@
                 </div>
                 <?php endforeach; ?>
 
-                <div> plant2 </div>
-                <div> plant3 </div>
-                <div> plant4 </div>
-                <div> plant5 </div>
-                <div> plant6 </div>
-                <div> plant7 </div>
-                <div> plant8 </div>
+<!--                <div> plant2 </div>-->
+<!--                <div> plant3 </div>-->
+<!--                <div> plant4 </div>-->
+<!--                <div> plant5 </div>-->
+<!--                <div> plant6 </div>-->
+<!--                <div> plant7 </div>-->
+<!--                <div> plant8 </div>-->
             </section>
           
             
