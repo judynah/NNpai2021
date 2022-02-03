@@ -32,8 +32,10 @@
                         <input name="surname" type="text" placeholder="surname">
                         <input name="date_of_birth" type="text" placeholder="date of birth">
                         <input name="email" type="text" placeholder="email@email.com">
-                        <input name="password" type="text" placeholder="password">
-                        <input name="confirmed_password" type="text" placeholder="confirm password">
+                        <input name="password" type="password" placeholder="password"
+                               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{5,}$" title="Password must contain lower case, upper case letter and at least one number">
+                        <input name="confirmed_password" type="password" placeholder="confirm password"
+                               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{5,}$" title="Password must contain lower case, upper case letter and at least one number">
                     </div>
 
                     <div class="right-data">

@@ -1,3 +1,8 @@
+.treatment {
+    background: #bfd1ae46 0% 0% no-repeat padding-box;
+    backdrop-filter:  blur(2px);
+}
+
 main {
     width: 100vw;
     height: 90vh;

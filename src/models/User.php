@@ -14,17 +14,62 @@ class User
     private $houseNumber;
     private $apartmentNumber;
     private $phoneNumber;
-//    private $idUserInfo;
+    private $photo;
+    private $id_user;
 
-    public function __construct(string $login,string $password, string $name, string $surname)
+    /**
+     * @return mixed
+     */
+    public function getIdUser()
+    {
+        return $this->id_user;
+    }
+
+    /**
+     * @param mixed $id_user
+     */
+    public function setIdUser($id_user): void
+    {
+        $this->id_user = $id_user;
+    }
+
+    public function __construct(string $login,string $password, string $name, string $surname,
+    string $dateOfBirth, string $city, string $postcode, string $street, int $houseNumber,
+                                int $apartmentNumber, string $phoneNumber, $photo)
     {
         $this->email = $login;
         $this->password = $password;
         $this->name= $name;
         $this->surname = $surname;
+        $this->dateOfBirth = $dateOfBirth;
+        $this->city = $city;
+        $this->postcode = $postcode;
+        $this->street=$street;
+        $this->houseNumber=$houseNumber;
+        $this->apartmentNumber=$apartmentNumber;
+        $this->phoneNumber=$phoneNumber;
+        $this->photo=$photo;
+
+
     }
 
-//
+    /**
+     * @return mixed
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+
+    /**
+     * @param mixed $photo
+     */
+    public function setImage($photo): void
+    {
+        $this->photo = $photo;
+    }
+//    private $idUserInfo;
+
 //    /**
 //     * @return mixed
 //     */

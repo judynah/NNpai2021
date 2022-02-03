@@ -21,6 +21,13 @@ body {
     
     
 }
+
+.messages {
+    font: normal normal normal 20px/20px Ink Free;
+    letter-spacing: 0px;
+    color: #3a3939;
+}
+
 nav {
     
     width: 100vw;
@@ -32,6 +39,17 @@ nav {
 
     background: transparent url('../img/monstera_bar.jpg') 0% 0% no-repeat padding-box;
     background-size: cover;
+}
+
+.nav-icons {
+    color: #FEF3EC;
+    text-align: center;
+    align-items: center;
+
+    /*display: grid;*/
+    /*grid-*/
+    /*background: transparent url('../img/monstera_bar.jpg') 0% 0% no-repeat padding-box;*/
+    /*background-size: cover;*/
 }
 
 .p-logo {
@@ -52,6 +70,7 @@ nav {
 
 .my-plants-header, .treatment, .society {
     text-align: left;
+    width: 15vw;
     font: normal normal normal 30px/12px Ink Free;
     letter-spacing: 0px;
     color: #FBF7F5;
@@ -68,28 +87,38 @@ nav {
 }
 
 
-ul {
+.ul-icons {
     display: flex;
     flex-direction: row;
     /* justify-content: right; */
     align-items: center;
+    /*margin-left: 2vw;*/
+}
+.blank-space{
+    width: 20vw;
 }
 
 .ul_buttons {
     color: #FEF3EC;
 }
 
-li {
-   
+.ul-icons > li {
     list-style-type: none;
+    margin:2vw;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+
     /* padding: 40px; */
 
 }
 
-li a {
+.ul-icons > li a {
     display: block;
+    font: normal normal normal 1vw/1.3vh Ink Free;
     text-align: center;
-    font-size: 0;
+    font-weight: bold;
+    /*margin-top: 0.3vh;*/
 
 }
 

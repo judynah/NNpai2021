@@ -9,40 +9,7 @@
 <body>
     <div class ="base-container">
         <!-- nawigacja - pasek górny -->
-        <nav> 
-            <div class="p-logo">
-                <a href="#" class="button"> P</a>
-            </div>
-            <div class="my-plants-header">
-                <a href="#" class="button"> Moje rośliny</a>
-            </div>
-            <div class="treatment">
-                <a href="#" class="button"> Pielęgnacja</a>
-            </div>
-            <div class="society">
-                <a href="#" class="button"> Społeczność</a>
-            </div>
-
-            <ul>
-                <li>
-                    <i class="fas fa-search"></i> 
-                    <a href="#" class="button"> search-button</a>
-                </li>
-                <li>
-                    <i class="fas fa-user-alt"></i>
-                    <a href="#" class="button"> account-button</a>
-                </li>
-                <li>
-                    <i class="fas fa-cog"></i> 
-                    <a href="#" class="button"> setttings-button</a>
-                </li>
-                <li>
-                    <i class="fas fa-bell"></i>
-                    <a href="#" class="button"> alarm-button</a>
-                </li>
-
-            </ul>
-        </nav>
+        <?php include_once('nav.php'); ?>
         
         <!-- główna część strony -->
         <main>

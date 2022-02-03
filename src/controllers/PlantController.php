@@ -21,22 +21,46 @@ class PlantController extends AppController
 
     public function plants()
     {
-        $plants = $this->plantRepository->getPlants();
+        if (!(isset($_SESSION))){
+            $this->render('login');
+        }
+
+        $_SESSION["newsession"] = 1;
+        $this->cookieOff();
+
+        $plants = $this->plantRepository->getPlants($_SESSION["user"]);
         $this->render('plants', ['plants' => $plants]);
     }
 
 
     public function addPlant()
     {
+        if (!(isset($_SESSION))){
+            $this->render('login');
+        }
+
+        $_SESSION["newsession"] = 1;
+        $this->cookieOff();
+
         if ($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
             move_uploaded_file(
                 $_FILES['file'][ 'tmp_name'],
                 dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['file']['name']
             );
+            $user = $_SESSION["user"];
+            $id = $user->getIdUser();
             // create new project object and save it in database
-            $plant = new Plant($_POST['name'], $_FILES['file']['name'],
-                $_POST['species'], $_POST['date_of_buy'], $_POST['temperature'], $_POST['pot_diameter']);
-            $this->plantRepository->addPlant($plant);
+            $plant = new Plant(
+                $_POST['name'],
+                $_FILES['file']['name'],
+                $_POST['species'],
+                $_POST['date_of_buy'],
+                $_POST['temperature'],
+                $_POST['pot_diameter'],
+                $id
+            );
+                // dodać numer id usera
+            $this->plantRepository->addPlant($plant, $user);
 
             return $this->render('plants', [
                 'messages' => $this->message,
@@ -70,3 +94,4 @@ class PlantController extends AppController
 ////        die("index method");
 //    }
 }
+?>

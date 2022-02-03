@@ -26,8 +26,48 @@ class UserRepository extends Repository
             $user['email'],
             $user['password'],
             $user['name'],
-            $user['surname']
+            $user['surname'],
+            $user['date_of_birth'],
+            $user['city'],
+            $user['postcode'],
+            $user['street'],
+            $user['house_number'],
+            $user['apartment_number'],
+            $user['phone_number'],
+            $user['photo']
         );
+    }
+
+    public function getUsers() :array
+    {
+
+        $result = [];
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM public."Users" u 
+            LEFT JOIN public."UserInfo" ui
+            ON u.id_user_info = ui."id_userInfo"
+        ');
+
+        $stmt->execute();
+        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach($users as $user){
+            $result[] = new User(
+                $user['email'],
+                $user['password'],
+                $user['name'],
+                $user['surname'],
+                $user['date_of_birth'],
+                $user['city'],
+                $user['postcode'],
+                $user['street'],
+                $user['house_number'],
+                $user['apartment_number'],
+                $user['phone_number'],
+                $user['photo']
+            );
+        }
+        return $result;
     }
 
     public function addUser(User $user){
@@ -51,18 +91,25 @@ class UserRepository extends Repository
         ]);
 
         $stmt = $this->database->connect()->prepare('
-        INSERT INTO public."Users" ("email", "password", id_user_info)
-        VALUES (?, ?, ?)
+        INSERT INTO public."Users" ("email", "password", id_user_info, created_at)
+        VALUES (?, ?, ?, ?)
         ');
 
         $id_user_info = 1;
+        $date = new DateTime();
 
         $stmt->execute([
             $user->getEmail(),
             $user->getPassword(),
-            $this->getUserInfoId($user)
+            $this->getUserInfoId($user),
+            $date->format('Y-m-d')
 //            $id_user_info
         ]);
+
+        $id = $this->getUserId($user);
+        $user->setIdUser($id);
+
+
     }
 
     public function getUserInfoId(User $user): int
@@ -83,6 +130,64 @@ class UserRepository extends Repository
         return $data['id_userInfo'];
     }
 
+    public function getUserId(User $user) :int
+    {
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM public."Users" WHERE "email" = :email
+        ');
+        $email = $user->getEmail();
+
+        $stmt->bindParam(':email',$email, PDO::PARAM_STR);
+        $stmt->execute();
+
+        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+        $id_user = $data['id_user'];
+        $user->setIdUser($id_user);
+        return $data['id_user'];
+    }
+
+
+    public function editUser(User $user, $name, $surname, $dateOfBirth, $phoneNumber, $photo,
+    $city, $postcode, $street, $house_number, $apartment_number, $password)
+    {
+        $id = $this->getUserId($user);
+        $id_info = $this->getUserInfoId($user);
+
+        $stmt = $this->database->connect()->prepare('
+            UPDATE public."UserInfo"  u 
+            SET name=?, surname=?, date_of_birth=?, photo=?, phone_number=?, city=?, postcode=?, street=?,
+            house_number=?, apartment_number=? 
+            WHERE u."id_userInfo" = ? ;
+        ');
+
+        $stmt->execute([
+            $name,
+            $surname,
+            $dateOfBirth,
+            $photo,
+            $phoneNumber,
+            $city,
+            $postcode,
+            $street,
+            $house_number,
+            $apartment_number,
+            $id_info
+        ]);
+
+        $stmt = $this->database->connect()->prepare('
+            UPDATE public."Users" u
+            SET password=?
+            WHERE u."id_user" = ?;
+        ');
+
+        $stmt->execute([
+            $password,
+            $id
+        ]);
+    }
+
+
 
 
 }
+?>

@@ -14,7 +14,7 @@ class Plant
     private $temperature;
     private $pot_diameter;
 
-    public function __construct($name,$image, $species, $date_of_buy, $temperature, $pot_diameter)
+    public function __construct($name,$image, $species, $date_of_buy, $temperature, $pot_diameter, $id_user)
     {
         $this->name = $name;
         $this->image = $image;
@@ -22,6 +22,7 @@ class Plant
         $this->date_of_buy = $date_of_buy;
         $this->temperature = $temperature;
         $this->pot_diameter = $pot_diameter;
+        $this->id_user = $id_user;
     }
 
     /**

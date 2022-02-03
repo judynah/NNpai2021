@@ -29,8 +29,10 @@
                     </div>
                     <input name="email" type="text" placeholder="email@email.com">
                     <input name="password" type="password" placeholder="password">
-                    <button id="login-button" type="submit">Sign in</button>
-                    <button id="create-account-button">Create account</button>
+                    <button id="login-button" type="submit" value="login">Sign in</button>
+                    <a href="signup">
+                        <button id="create-account-button" type="button" name="signup"  >Create account</button>
+                    </a>
                 </form>
 
             </div>

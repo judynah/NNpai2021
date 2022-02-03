@@ -15,30 +15,22 @@ class  DefaultController extends AppController {
 ////        die("login method");
 //    }
 
-    public function main_page(){
-        // display main_page.php
-        $this->render('main_page');
-//        die("main_page method");
-    }
 
-    public function society(){
-        //  display society.php
-        $this->render('society');
-    }
+
 
     public function treatment(){
         //  display treatment.php
         $this->render('treatment');
     }
 
-//    public function signup(){
-//        // display signup.php
-//        $this->render('signup');
-//    }
+    public function account(){
+        // display account.php
 
-    public function settings(){
-        // display settings.php
-        $this->render('settings');
+        if (!(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)){
+            $this->render('login');
+        }
+
+        $this->render('account');
     }
 
     public function add_plant(){
@@ -51,8 +43,36 @@ class  DefaultController extends AppController {
         $this->render('ask_for_advice');
     }
     public function give_plant(){
-        // display settings.php
+        // display give_plant.php
         $this->render('give_plant');
     }
 
+//    public function index()
+//    {
+//        $_SESSION["newsession"] = 1;
+//        $this->cookieOn();
+//
+//        $this->render('login');
+//    }
+
+    public function main_page()
+    {
+//        session_start();
+
+        if (!(isset($_SESSION))){
+            $this->render('login');
+        }
+
+        $_SESSION["newsession"] = 1;
+        $this->cookieOff();
+
+//        if (!$this->isPost()) {
+//            $_SESSION["newsession"] = 1;
+//        }
+
+        $this->render('main_page');
+    }
+
+
 }
+?>

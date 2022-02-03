@@ -39,6 +39,12 @@ main {
 
 }
 
+.settings {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
 h1 {
     font: normal normal normal 2vw/43px Ink Free;
     letter-spacing: 1.4px;
@@ -78,7 +84,7 @@ h1 {
 }
 
 
-button {
+.settings-password-container > ul> li > button {
     background: transparent linear-gradient(180deg, #36431CC9 0%, #35411A96 100%) 0% 0% no-repeat padding-box;
     border: 1px solid #212B13;
     border-radius: 20px;
@@ -91,6 +97,12 @@ button {
     box-shadow: 0px 3px 6px #00000029;
     font: normal normal normal 1.5vw/2vw Ink Free;
     letter-spacing: 0px;
+}
+ ul {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: right; */
+    align-items: center;
 }
 
 li {

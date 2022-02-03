@@ -1,13 +1,15 @@
-.treatment {
+nav >.society {
     background: #bfd1ae46 0% 0% no-repeat padding-box;
     backdrop-filter:  blur(2px);
 }
+
 
 main {
  
     width: 100%;
     height: 90vh;
     display: grid;
+    overflow : auto;
     /* grid-template-columns: repeat(4, 1fr); */
 
     /* grid-template-columns: [first] 5% [line2] 44% [line3] 2% [line4] 44% [col4-start] 5% [end];

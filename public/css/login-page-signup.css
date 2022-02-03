@@ -108,6 +108,13 @@ form.form-signup {
 
 }
 
+.form-signup > .messages {
+    grid-column: 2/11;
+    grid-row: 1/2;
+    text-align: center;
+    margin-top: 2.2vh;
+}
+
 
 .right-data {
     grid-column: 7/11;
