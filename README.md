@@ -40,7 +40,7 @@ Opis projektu względem kryteriów ewaluacji projektu:
 18. Wylogowanie
 19. Stosuję m.in. left join na tabeli Users oraz Plants
 20. Hasła są hashowane
-21. Powtarzalny kod jest zawarty w pliku oraz nav.php
+21. Powtarzalny kod jest zawarty w pliku nav.php
 22. Czystość i przejrzystość kodu
 23. Baza danych zrzucona do pliku .sql
 
