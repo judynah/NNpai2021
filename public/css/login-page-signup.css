@@ -155,8 +155,6 @@ button {
 }
 
 
-
-
 input {
     background-color: transparent;
     border: none;
@@ -168,7 +166,7 @@ input {
     text-align: left;
     font: normal normal normal 20px/20px Ink Free;
     letter-spacing: 0px;
-    color: #707070;
+    color: rgba(112, 112, 112, 0.76);
 }
 
 @media only screen and (max-device-width: 420px){

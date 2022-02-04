@@ -2,6 +2,8 @@ const form = document.querySelector("form");
 const emailInput = form.querySelector('input[name="email"]');
 const confirmedPasswordInput = form.querySelector('input[name="confirmed_password"]');
 
+// const confirmedPasswordInputSett = form.querySelector('input[name="setting-confirm-password"]');
+
 function isEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
 }
@@ -34,10 +36,20 @@ function validatePassword() {
     );
 }
 
+// function validatePasswordSett() {
+//     setTimeout(function () {
+//             const condition = arePasswordsSame(
+//                 confirmedPasswordInputSett.previousElementSibling.value,
+//                 confirmedPasswordInputSett.value
+//             );
+//             markValidation(confirmedPasswordInputSett, condition);
+//         },
+//         1000
+//     );
+// }
+
 emailInput.addEventListener('keyup', validateEmail);
 confirmedPasswordInput.addEventListener('keyup', validatePassword);
 
-function getStarted() {
-    $(".logo").hide();
-    // $(".login-container").show().css("display", "flex");
-}
+// confirmedPasswordInputSett.addEventListener('keyup', validatePasswordSett);
+

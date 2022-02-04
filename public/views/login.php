@@ -44,9 +44,4 @@
 
 </div>
 
-<?php
-
-    echo '<script type="text/javascript">getStarted();</script>';
-
-?>
 </body>

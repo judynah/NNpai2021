@@ -118,6 +118,7 @@ li > input {
         width: 63vw;
         height: 3vh;
         font: normal normal normal 1.5vh/2vh Ink Free;
+        color: #3a3939;
     }
 
     #add-content > ul > li >h1 {

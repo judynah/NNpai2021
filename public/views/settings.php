@@ -3,6 +3,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/settings.css?<?php echo time(); ?>">
     <link rel="stylesheet" type="text/css" href="public/css/style.css?<?php echo time(); ?>">
     <script src="https://kit.fontawesome.com/a15f7b587f.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./public/js/script.js" defer></script>
     <title>Settings</title>
 </head>
 
