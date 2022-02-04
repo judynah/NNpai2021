@@ -45,24 +45,24 @@ Opis projektu względem kryteriów ewaluacji projektu:
 23. Baza danych zrzucona do pliku .sql
 
 ## Diagram ERD
-![img.png](img.png)
+![img.png](public/screenshots/img.png)
 
 ## Widoki
 * PC
-![img_1.png](img_1.png)
-![img_2.png](img_2.png)
-![img_7.png](img_7.png)
-![img_3.png](img_3.png)
-![img_4.png](img_4.png)
-![img_5.png](img_5.png)
-![img_6.png](img_6.png)
+![img_1.png](public/screenshots/img_1.png)
+![img_2.png](public/screenshots/img_2.png)
+![img_7.png](public/screenshots/img_7.png)
+![img_3.png](public/screenshots/img_3.png)
+![img_4.png](public/screenshots/img_4.png)
+![img_5.png](public/screenshots/img_5.png)
+![img_6.png](public/screenshots/img_6.png)
 
 * smartfon
-![img_11.png](img_11.png)
-![img_12.png](img_12.png)
-![img_8.png](img_8.png)
-![img_9.png](img_9.png)
-![img_10.png](img_10.png)
+![img_11.png](public/screenshots/img_11.png)
+![img_12.png](public/screenshots/img_12.png)
+![img_8.png](public/screenshots/img_8.png)
+![img_9.png](public/screenshots/img_9.png)
+![img_10.png](public/screenshots/img_10.png)
 
 
 
