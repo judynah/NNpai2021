@@ -14,7 +14,6 @@
         <!-- główna część strony -->
         <main>
             <header class="upcoming-treatment-header"> Upcoming treatment </header>
-            <header class = "last-actions-header"> Last actions </header>
             <section class="upcoming-treatment">
                 <div id="treat1">
                     <img src="public/img/plants/pl1.jpg">
@@ -53,6 +52,9 @@
                     </div>
                 </div>
             </section>
+
+            <header class = "last-actions-header"> Last actions </header>
+
             <section class= "last-actions">
                 <div id="action1">
                     <img src="public/img/plants/pl1.jpg">

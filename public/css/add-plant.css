@@ -100,3 +100,48 @@ li > input {
 }
 
 
+@media only screen and (max-device-width: 420px) {
+    .addPlant-header {
+        margin: 2vh;
+        font: normal bold normal 2vh/2vh Ink Free;
+
+    }
+
+    .add-container {
+        margin: 2vh;
+        padding: 2vh;
+        font: normal normal normal 1.5vh/2vh Ink Free;
+        height: auto;
+    }
+
+    li > input {
+        width: 63vw;
+        height: 3vh;
+        font: normal normal normal 1.5vh/2vh Ink Free;
+    }
+
+    #add-content > ul > li >h1 {
+        font: normal normal normal 1.5vh/2vh Ink Free;
+        text-align: center;
+        width: 43vw;
+    }
+
+    #add-content > ul > li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        width: 43vw;
+    }
+
+    #add-content >ul>li> button {
+        margin-top: 3vh;
+        font: normal normal normal 1.7vh/2vh Ink Free;
+        width: 65vw;
+    }
+
+
+}
+
+

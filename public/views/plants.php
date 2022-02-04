@@ -11,18 +11,22 @@
 
         <main>
             <section class="plants">
-                <?php foreach($plants as $plant):?>
-                <div class="plant1">
-                    <div id="img">
-                         <img src="public/uploads/<?=$plant['image'] ;?>" >
-                    </div>
-                    <div id="plantname">
-                        <? $_SESSION['id_plant'] = $plant['id_plant'] ; ?>
-                        <a href="treatment" class="button"><?= $plant['name'];?></a>
-                    </div>
+                <?php
+                if(isset($plants)) {
+                    foreach($plants as $plant):?>
+                    <div class="plant1">
+                        <div id="img">
+                             <img src="public/uploads/<?=$plant['image'] ;?>" >
+                        </div>
+                        <div id="plantname">
+                            <? $_SESSION['id_plant'] = $plant['id_plant'] ; ?>
+                            <a href="treatment" class="button"><?= $plant['name'];?></a>
+                        </div>
 
-                </div>
-                <?php endforeach; ?>
+                    </div>
+                <?php endforeach;
+                }
+                ?>
 
             </section>
           

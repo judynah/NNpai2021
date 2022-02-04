@@ -74,6 +74,33 @@ main>.plants>div>#plantname {
 }
 
 
+@media only screen and (max-device-width: 420px) {
+    .plants {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .plant1 {
+        height: 30vh;
+    }
+    .plants> div > div {
+        width: 35vw;
+        height: 35vw;
+    }
+
+    .plants> div > div > img {
+        width: 35vw;
+        height: 35vw;
+    }
+
+    main>.plants>div>#plantname {
+        font: normal normal normal 2vh/2vh Ink Free;
+        height: 60%;
+    }
+
+}
+
+
 
 
 

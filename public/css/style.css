@@ -138,3 +138,56 @@ nav .plants-header {
     box-shadow: 0 0 0.2em rgb(178, 0, 0);
     outline: none;
 }
+
+
+@media only screen and (max-device-width: 420px) {
+
+    .nav-icons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .nav-icons >ul  {
+        grid-row-start: 1;
+        grid-row-end: span 1;
+        grid-column-start: 1 ;
+        grid-column-end: span 4;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-items: center;
+
+    }
+    .nav-icons >ul > li {
+        margin: 0 6vw;
+        margin-top: 1.2vh;
+
+    }
+
+    .nav-icons > div {
+        grid-row-start: 2;
+        grid-row-end: span 1;
+
+    }
+
+    .my-plants-header, .treatment, .society {
+        width: 22vw;
+        font: normal normal normal 2vh/2vh Ink Free;
+    }
+
+    /*.nav-icons > ul > li > i::before {*/
+    /*    width: 5vh;*/
+    /*    height: 5vh;*/
+    /*}*/
+
+    .nav-icons > ul > li > a {
+        font: normal normal normal 1vh/1vh Ink Free;
+    }
+
+
+
+
+
+}

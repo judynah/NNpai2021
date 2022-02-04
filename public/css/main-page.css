@@ -123,12 +123,31 @@ main>section>div>img {
 .plant-short-data {
     height: 50%;
     width: 90%;
-    padding:  0.2em;
+    padding: 0.2em;
     background: #29401554 0% 0% no-repeat padding-box;
     border: 1px solid #707070bd;
     border-radius: 28px;
-    opacity:1;
+    opacity: 1;
     /* background-color:rgba(255, 255, 255, 0.055) */
+}
+
+@media only screen and (max-device-width: 420px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main > header {
+        font: normal bold normal 3vh/6vh Ink Free;
+    }
+
+    main > section {
+        margin: 1vh 0;
+    }
 
 
 }
+
+
+
+

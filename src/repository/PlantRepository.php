@@ -101,7 +101,7 @@ class PlantRepository extends Repository
         $stmt->bindParam(':email',$email, PDO::PARAM_STR);
         $stmt->execute();
         $plants = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $id_user = $this->getPlantUserId($user);
+//        $id_user = $this->getPlantUserId($user);
 
         return $plants;
 
@@ -139,6 +139,7 @@ class PlantRepository extends Repository
         $stmt->execute();
 
         $plant = $stmt->fetch(PDO::FETCH_ASSOC);
+
         return $plant;
     }
 }

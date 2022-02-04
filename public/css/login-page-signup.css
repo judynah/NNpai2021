@@ -183,21 +183,56 @@ input {
         grid-column-end: span 1;
         grid-row-start: 2;
         grid-row-end: span 1;
-    }
-    .logo{
-        font: normal normal normal 20px/20px "Comic Sans MS"; ;
-    }
-
-    * {
-        font-size: 36px;
-    }
-
-    .login-container {
+        height: 100%;
         width: 100%;
+        backdrop-filter: blur(6px);
     }
 
-    form {
-        margin: auto;
+    .logo {
+        font: normal normal normal 13vw/30vw Hontizema;
+    }
+
+
+
+    .signup-container {
+        grid-column-start: 2;
+        grid-column-end: span 1;
+        grid-row-start: 3;
+        grid-row-end: span 1;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    form.form-signup {
+        margin: 1px;
+        /*padding: 2px;*/
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+
+        font: normal normal normal 2vh/4vh "Ink Free";
+    }
+
+    .form-signup > div > input {
+        width: 50vw;
+        height: 4vh;
+        font: normal normal normal 2vh/4vh "Ink Free";
+        padding: 1px 1px;
+    }
+    .form-signup >  button {
+        width: 52vw;
+        font: normal normal normal 2vh/4vh "Ink Free";
+        height: 5vh;
+        border-radius: 20px;
+
+    }
+    .form-signup > a > button {
+        width: 52vw;
+        margin-top: auto;
+        font: normal normal normal 2vh/4vh "Ink Free";
     }
 }
 
