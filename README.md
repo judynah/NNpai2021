@@ -44,10 +44,10 @@ Opis projektu względem kryteriów ewaluacji projektu:
 22. Czystość i przejrzystość kodu
 23. Baza danych zrzucona do pliku .sql
 
-##Diagram ERD
+## Diagram ERD
 ![img.png](img.png)
 
-##Widoki
+## Widoki
 * PC
 ![img_1.png](img_1.png)
 ![img_2.png](img_2.png)
@@ -57,7 +57,7 @@ Opis projektu względem kryteriów ewaluacji projektu:
 ![img_5.png](img_5.png)
 ![img_6.png](img_6.png)
 
-*smartfon
+* smartfon
 ![img_11.png](img_11.png)
 ![img_12.png](img_12.png)
 ![img_8.png](img_8.png)
