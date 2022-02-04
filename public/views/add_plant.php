@@ -44,11 +44,11 @@
                             <input id="day-of-buy" name="date_of_buy"  type="text" placeholder="day of buy">
                         </li>
                         <li>
-                            <h1>Ambient temperature </h1>
+                            <h1>Ambient temperature [C] </h1>
                             <input id="ambient-temperature"  name="temperature" type="text" placeholder="temperature (degC)">
                         </li>
                         <li>
-                            <h1> Pot diameter </h1>
+                            <h1> Pot diameter [cm]</h1>
                             <input id="pot-diameter"  name="pot_diameter" type="text" placeholder="pot diameter">
                         </li>
                         <li>

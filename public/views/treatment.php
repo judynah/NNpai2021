@@ -22,7 +22,8 @@
 <!--                        <button type="submit">send</button>-->
 <!--                    </form>-->
                 </div>
-                <div class="plant-name"><?= $_SESSION['id_plant']; ?></div>
+<!--                <div class="plant-name">--><?//= $_SESSION['id_plant']; ?><!--</div>-->
+                <div class="plant-name">name</div>
 
             </section>
 
