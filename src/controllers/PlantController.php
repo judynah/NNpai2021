@@ -64,11 +64,32 @@ class PlantController extends AppController
 
             return $this->render('plants', [
                 'messages' => $this->message,
-                'plants' => $this->plantRepository->getPlants()
+                'plants' => $this->plantRepository->getPlants($user)
             ]);
 
         }
         return $this->render('add_plant', ['messages' => $this->message]);
+
+    }
+
+    public function treatment(){
+
+        if (!(isset($_SESSION))){
+            $this->render('login');
+        }
+
+        $_SESSION["newsession"] = 1;
+        $this->cookieOff();
+
+        $id_plant = $_SESSION['id_plant'];
+        $user = $_SESSION['user'];
+        $plant = $this->plantRepository->getPlant($id_plant, $user );
+
+        //  display treatment.php
+        $this->render('treatment');
+
+
+
     }
 
     private function validate(array $file) : bool

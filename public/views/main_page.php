@@ -13,8 +13,8 @@
         
         <!-- główna część strony -->
         <main>
-            <header class="upcoming-treatment-header"> Nadchodzące zabieg </header>
-            <header class = "last-actions-header"> Ostatnie akcje </header>
+            <header class="upcoming-treatment-header"> Upcoming treatment </header>
+            <header class = "last-actions-header"> Last actions </header>
             <section class="upcoming-treatment">
                 <div id="treat1">
                     <img src="public/img/plants/pl1.jpg">

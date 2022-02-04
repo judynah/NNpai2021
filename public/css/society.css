@@ -38,65 +38,62 @@ main {
     padding: 8% 2% 8% 8%;
     row-gap: 3%;
     column-gap: 3%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
     
 }
 
-#friend1 {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    background: #fbf7f5a8 0% 0% no-repeat padding-box;
+main>.friends >div  {
+    background: #fbf7f59f 0% 0% no-repeat padding-box;
+    margin: 1em;
     border-radius: 44px;
+
     display: grid;
-    grid-template-rows:  [row1-start] 60% [row1] 40% [end];
+    grid-template-rows: repeat(10, 1fr);
+    /* grid-template-columns: repeat(4, 1fr); */
     align-items: center;
     justify-items: center;
-    box-shadow: 0px 3px 6px #00000029;
+    vertical-align: middle;
 }
 
-#friend2 {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    row-gap: 2%;
-    column-span: 2;
-    background: #fbf7f5a8 0% 0% no-repeat padding-box;
-    border-radius: 44px;
+.friends> div > div{
+    grid-row: 2/7;
+    width: 12vw;
+    height: 13vw;
+
     display: grid;
-    grid-template-rows:  [row1-start] 60% [row1] 40% [end];
+    grid-template-rows: repeat(1, 1fr);
     align-items: center;
     justify-items: center;
-    box-shadow: 0px 3px 6px #00000029;
-}
-#friend3 {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    background: #fbf7f5a8 0% 0% no-repeat padding-box;
-    border-radius: 44px;
-    display: grid;
-    grid-template-rows:  [row1-start] 60% [row1] 40% [end];
-    align-items: center;
-    justify-items: center;
-    box-shadow: 0px 3px 6px #00000029;
-}
-#friend4 {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    background: #fbf7f5a8 0% 0% no-repeat padding-box;
-    border-radius: 44px;
-    display: grid;
-    grid-template-rows:  [row1-start] 60% [row1] 40% [end];
-    align-items: center;
-    justify-items: center;
-    box-shadow: 0px 3px 6px #00000029;
+    vertical-align: middle;
 }
 
-img {
-    position: inherit;
-    height: 80%;
-    width: 60%;
-    object-fit: cover;
+.friends> div > div > img {
+    height: 12vw;
+    width: 12vw;
     border-radius: 50%;
     box-shadow: 0px 3px 6px #291D164D;
     border: 2px solid #1D3811BD;
+    object-fit: cover;
+}
+
+main>.friends>div>#friendname {
+    grid-row: 7/10;
+    height: 50%;
+    width: 70%;
+    background: #29401578 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #707070c0;
+    border-radius: 0.5em;
+    text-align: center;
+    font: normal normal normal 20px/37px Ink Free;
+    letter-spacing: 1.2px;
+    color: #FEF3EC;
 }
 
 .friends>div>i {
@@ -113,8 +110,8 @@ img {
     grid-column: 5/9;
     grid-row: 1/3;
     margin: 8% 8% 2% 2%;
-    padding: 5% 5% 5% 10%;
-    font: normal normal normal 25px/37px Ink Free;
+    padding: 2% 2% 2% 10%;
+    font: normal normal normal 2.5vh/4vh Ink Free;
     letter-spacing: 1.2px;
     color: #121C09;
     background: #fbf7f577 0% 0% no-repeat padding-box;
@@ -128,15 +125,9 @@ img {
     color: #294015B0;
 }
 
-#give-plant-name, #ask-for-advice-name {
-    color: rgb(49, 48, 40);
+.plant-actions >div > a {
+    color: #121C09;
 }
-
-
-/* .plant-actions>div {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-} */
 
 .advertisments {
     grid-column: 5/9;
@@ -154,41 +145,32 @@ img {
     text-align: center;
 
 
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-template-rows: repeat(4, 1fr);
     
 }
 
 #advert-name{
-    grid-row: 1/2;
-    grid-column: 1/1;
-    height: 50%;
+    height: 10%;
     width: 100%;
     background: #fbf7f579 0% 0% no-repeat padding-box;
     border-radius: 25px;
+    margin-bottom: 5%;
+    font-weight: bold;
 }
 
-.advert1 {
-    grid-row: 2/3;
-    grid-column: 1/1;
-    margin: 1%;
+
+.advert {
+    height: 30%;
+    width: 100%;
+    margin-bottom: 2%;
     background: #fbf7f579 0% 0% no-repeat padding-box;
     border-radius: 25px;
 }
 
-.advert2 {
-    grid-row: 3/4;
-    grid-column: 1/1;
-    margin: 1%;
-    background: #fbf7f579 0% 0% no-repeat padding-box;
-    border-radius: 25px;
-}
-
-.advert3 {
-    grid-row: 4/5;
-    grid-column: 1/1;
-    margin: 1%;
-    background: #fbf7f579 0% 0% no-repeat padding-box;
-    border-radius: 25px;
+.users-button {
+    color: #FEF3EC;
+    text-decoration: none;
 }
 

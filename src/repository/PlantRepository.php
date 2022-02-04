@@ -60,11 +60,39 @@ class PlantRepository extends Repository
 
     }
 
-    public function getPlants(User $user): array
+//    public function getPlants(User $user): array
+//    {
+//        $email = $user->getEmail();
+//
+//        $result = [];
+//        $stmt = $this->database->connect()->prepare('
+//            SELECT * FROM public."Plants" p LEFT JOIN public."Users" u
+//         ON p.id_user = u.id_user WHERE email= :email;
+//        ');
+//
+//        $stmt->bindParam(':email',$email, PDO::PARAM_STR);
+//        $stmt->execute();
+//        $plants = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//        $id_user = $this->getPlantUserId($user);
+//
+//        foreach($plants as $plant){
+//            $result[] = new Plant(
+//                $plant['name'],
+//                $plant['image'],
+//                $plant['species'],
+//                $plant['date_of_buy'],
+//                $plant['temperature'],
+//                $plant['pot_diameter'],
+//                $id_user
+//            );
+//        }
+//        return $result;
+//    }
+
+    public function getPlants(User $user)
     {
         $email = $user->getEmail();
 
-        $result = [];
         $stmt = $this->database->connect()->prepare('
             SELECT * FROM public."Plants" p LEFT JOIN public."Users" u
          ON p.id_user = u.id_user WHERE email= :email;
@@ -75,19 +103,11 @@ class PlantRepository extends Repository
         $plants = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $id_user = $this->getPlantUserId($user);
 
-        foreach($plants as $plant){
-            $result[] = new Plant(
-                $plant['name'],
-                $plant['image'],
-                $plant['species'],
-                $plant['date_of_buy'],
-                $plant['temperature'],
-                $plant['pot_diameter'],
-                $id_user
-            );
-        }
-        return $result;
+        return $plants;
+
     }
+
+
 
     public function getPlantUserId(User $user) :int
     {
@@ -110,5 +130,20 @@ class PlantRepository extends Repository
         return $id_user;
     }
 
+    public function getPlantIdPlant(int $id_plant){
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM public."Plants" WHERE id_plant= :id_plant;
+        ');
+
+        $stmt->bindParam(':id_plant', $id_plant, PDO::PARAM_INT);
+        $stmt->execute();
+
+        $plant = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $plant;
+    }
 }
+
+
+
+
 ?>

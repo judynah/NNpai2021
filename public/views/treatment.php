@@ -10,11 +10,11 @@
     <div class ="base-container">
         <!-- nawigacja - pasek górny -->
         <?php include_once('nav.php'); ?>
-
         <!-- Główne działanie strony -->
         <main>
             <section class="plant-introduction">
                 <div class="plant-introduction-photo">
+                    <img src="public/uploads/galina-n-miziNqvJx5M-unsplash.jpg">
 
 <!--                    </div>-->
 <!--                    <form action="addPlantPhoto" method="POST" ENCTYPE="multipart/form-data">-->
@@ -22,8 +22,8 @@
 <!--                        <button type="submit">send</button>-->
 <!--                    </form>-->
                 </div>
-<!--                <img src="public/uploads/--><?//= $plant->getImage() ?><!--">-->
-<!--                <div class="plant-name">--><?//= $plant->getName()?><!--</div>-->
+                <div class="plant-name"><?= $_SESSION['id_plant']; ?></div>
+
             </section>
 
             <section class="plant-planned-action">

@@ -17,12 +17,6 @@ class  DefaultController extends AppController {
 
 
 
-
-    public function treatment(){
-        //  display treatment.php
-        $this->render('treatment');
-    }
-
     public function account(){
         // display account.php
 
@@ -35,15 +29,36 @@ class  DefaultController extends AppController {
 
     public function add_plant(){
         // display settings.php
+        if (!(isset($_SESSION))){
+            $this->render('login');
+        }
+
+        $_SESSION["newsession"] = 1;
+        $this->cookieOff();
+
         $this->render('add_plant');
     }
 
     public function ask_for_advice(){
-        // display settings.php
+        if (!(isset($_SESSION))){
+            $this->render('login');
+        }
+
+        $_SESSION["newsession"] = 1;
+        $this->cookieOff();
+
+
+
         $this->render('ask_for_advice');
     }
     public function give_plant(){
-        // display give_plant.php
+        if (!(isset($_SESSION))){
+            $this->render('login');
+        }
+
+        $_SESSION["newsession"] = 1;
+        $this->cookieOff();
+
         $this->render('give_plant');
     }
 
@@ -57,7 +72,6 @@ class  DefaultController extends AppController {
 
     public function main_page()
     {
-//        session_start();
 
         if (!(isset($_SESSION))){
             $this->render('login');
@@ -66,9 +80,6 @@ class  DefaultController extends AppController {
         $_SESSION["newsession"] = 1;
         $this->cookieOff();
 
-//        if (!$this->isPost()) {
-//            $_SESSION["newsession"] = 1;
-//        }
 
         $this->render('main_page');
     }

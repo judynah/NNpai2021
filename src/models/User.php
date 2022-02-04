@@ -35,7 +35,7 @@ class User
 
     public function __construct(string $login,string $password, string $name, string $surname,
     string $dateOfBirth, string $city, string $postcode, string $street, int $houseNumber,
-                                int $apartmentNumber, string $phoneNumber, $photo)
+                                int $apartmentNumber, string $phoneNumber)
     {
         $this->email = $login;
         $this->password = $password;
@@ -48,7 +48,7 @@ class User
         $this->houseNumber=$houseNumber;
         $this->apartmentNumber=$apartmentNumber;
         $this->phoneNumber=$phoneNumber;
-        $this->photo=$photo;
+//        $this->photo=$photo;
 
 
     }
@@ -64,7 +64,7 @@ class User
     /**
      * @param mixed $photo
      */
-    public function setImage($photo): void
+    public function setPhoto($photo): void
     {
         $this->photo = $photo;
     }

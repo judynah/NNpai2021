@@ -13,9 +13,9 @@ Routing::get('main_page', 'DefaultController');
 Routing::get('account', 'DefaultController');
 Routing::get('plants', 'PlantController');
 Routing::get('society', 'SecurityController');
-Routing::get('treatment', 'DefaultController');
-Routing::get('ask_for_advice', 'DefaultController');
-Routing::get('give_plant', 'DefaultController');
+Routing::get('treatment', 'PlantController');
+Routing::post('ask_for_advice', 'DefaultController');
+Routing::post('give_plant', 'DefaultController');
 
 Routing::post('login', 'SecurityController');
 Routing::post('logout', 'SecurityController');

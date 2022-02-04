@@ -17,14 +17,13 @@
         <header class="give-plant-header"> My Account</header>
         <section class="account-name-container">
             <div class="user-photo">
-<!--                dodac zdjęcie-->
-<!--                <img src="public/uploads/--><?//= $_SESSION['user']->getImage(); ?><!--" >-->
-                <img id="user-image " src="public/uploads/galina-n-miziNqvJx5M-unsplash.jpg" >
+<!--               dodac zdjęcie-->
+
+                <img id="user-image" src="public/uploads/<?=$_SESSION['user']->getPhoto();?>" >
 
             </div>
 
             <div class="user-name">
-<!--                <h1>Natka Pietruszki</h1>-->
                 <h1><?=$_SESSION['user']->getName()." ".$_SESSION['user']->getSurname(); ?></h1>
             </div>
 

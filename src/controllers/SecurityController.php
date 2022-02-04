@@ -84,6 +84,7 @@ class SecurityController extends AppController
         $apartmentNumber = $_POST['apartment_number'];
         $phoneNumber = $_POST['phone_number'];
 
+
         if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             return $this->render('signup', ['messages' => ["Wrong email type!"]]);
         }
@@ -101,20 +102,20 @@ class SecurityController extends AppController
         $_SESSION["surname"] = $surname;
         $_SESSION['loggedin'] == true;
 
-        $user = New User($email, password_hash($password, PASSWORD_BCRYPT), $name, $surname);
+        $user = New User($email, password_hash($password, PASSWORD_BCRYPT), $name, $surname,
+        $date_of_birth, $city, $postcode, $street, $houseNumber, $apartmentNumber, $phoneNumber);
 
 //        $user->setName($name);
 //        $user->setSurname($surname);
         $user->setDateOfBirth($date_of_birth);
         $user->setCity($city);
         $user->setPostcode($postcode);
-        $user->getStreet($street);
+        $user->setStreet($street);
         $user->setHouseNumber($houseNumber);
         $user->setApartmentNumber($apartmentNumber);
         $user->setPhoneNumber($phoneNumber);
         $user->setEmail($email);
         $user->setPassword($password);
-//        $user->setIdUser($id);
 
         $this->userRepository->addUser($user);
 
@@ -129,21 +130,23 @@ class SecurityController extends AppController
 
     }
 
-//    public function settings()
-//    {
-//
-//        $_SESSION["newsession"] = 1;
-//        $this->cookieOff();
-//
-//        $this->render('settings');
-//    }
 
     public function settings(){
-        if (!$this->isPost()){
-            return $this->render('settings');
+//        if (!$this->isPost()){
+//            return $this->render('settings');
+//        }
+
+        if (!(isset($_SESSION))){
+            $this->render('login');
         }
 
+        $_SESSION["newsession"] = 1;
         $this->cookieOff();
+
+        move_uploaded_file(
+            $_FILES['file'][ 'tmp_name'],
+            dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['file']['name']
+        );
 
         $name = $_POST['name'];
         $surname = $_POST['surname'];
@@ -167,12 +170,12 @@ class SecurityController extends AppController
             return $this->render('settings', ['messages' => ["Your Surname is necessarily!"]]);
         }
         if ($password !== $confirmedPassword) {
-            return $this->render('settings', ['messages' => ["Confirmed password shoul be the same as password!"]]);
+            return $this->render('settings', ['messages' => ["Confirmed password should be the same as password!"]]);
         }
 //        $user = $_SESSION['user'];
         $user = $this->userRepository->getUser($_SESSION['email']);
-        $this->userRepository->editUser( $user, $name, $surname, $date_of_birth, $phoneNumber, $photo, $city,
-        $postcode, $street, $houseNumber, $apartmentNumber, password_hash($password, PASSWORD_BCRYPT));
+        $this->userRepository->editUser( $user, $name, $surname, $date_of_birth, $phoneNumber, $photo,
+            $city, $postcode, $street, $houseNumber, $apartmentNumber, $password);
 
         $_SESSION['email'] = $user->getEmail();
         $_SESSION['name'] =$name;
@@ -181,8 +184,6 @@ class SecurityController extends AppController
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/account");
-
-
 
     }
 

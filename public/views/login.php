@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/login-page.css?<?php echo time(); ?>">
     <link rel="stylesheet" type="text/css" href="public/css/style.css?<?php echo time(); ?>">
+    <script type="text/javascript" src="./public/js/script.js" defer></script>
     <title>Login page</title>
 </head>
 
@@ -42,4 +43,10 @@
     </div>
 
 </div>
+
+<?php
+
+    echo '<script type="text/javascript">getStarted();</script>';
+
+?>
 </body>

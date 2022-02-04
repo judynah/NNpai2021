@@ -69,7 +69,7 @@ nav {
 }
 
 .my-plants-header, .treatment, .society {
-    text-align: left;
+    text-align: center;
     width: 15vw;
     font: normal normal normal 30px/12px Ink Free;
     letter-spacing: 0px;
@@ -130,4 +130,11 @@ nav .plants-header {
     color: #FBF7F5;
     text-shadow: 4px 3px 6px #00000066;
     opacity: 1;
+}
+
+.no-valid {
+    border: 4px;
+    /*border-radius: 1em;*/
+    box-shadow: 0 0 0.2em rgb(178, 0, 0);
+    outline: none;
 }

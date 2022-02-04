@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/login-page-signup.css?<?php echo time(); ?>">
     <link rel="stylesheet" type="text/css" href="public/css/style.css?<?php echo time(); ?>">
+    <script type="text/javascript" src="./public/js/script.js" defer></script>
     <title>Sign up</title>
 </head>
 
@@ -31,11 +32,13 @@
                         <input name="name" type="text" placeholder="name">
                         <input name="surname" type="text" placeholder="surname">
                         <input name="date_of_birth" type="text" placeholder="date of birth">
-                        <input name="email" type="text" placeholder="email@email.com">
+                        <input name="email" type="text" placeholder="email@email.com" readonly onfocus="this.removeAttribute('readonly');">
                         <input name="password" type="password" placeholder="password"
-                               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{5,}$" title="Password must contain lower case, upper case letter and at least one number">
+                               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{5,}$" title="Password must contain lower case, upper case letter and at least one number"
+                               readonly onfocus="this.removeAttribute('readonly');">
                         <input name="confirmed_password" type="password" placeholder="confirm password"
-                               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{5,}$" title="Password must contain lower case, upper case letter and at least one number">
+                               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{5,}$" title="Password must contain lower case, upper case letter and at least one number"
+                               readonly onfocus="this.removeAttribute('readonly');">
                     </div>
 
                     <div class="right-data">

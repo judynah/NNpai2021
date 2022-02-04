@@ -58,25 +58,6 @@ main {
 }
 
 
-/*.plants > #img {*/
-/*    height: 22vw;*/
-/*    width: 22vw;*/
-/*    border-radius: 50%;*/
-/*    box-shadow: 0px 3px 6px #291D164D;*/
-/*    border: 2px solid #1D3811BD;*/
-/*    object-fit: cover;*/
-/*}*/
-
-main>.plants>div>#img>img {
-    
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*border-radius: 50%;*/
-    /*background: transparent url('https://www.ikea.com/pl/pl/images/products/fejka-sztuczna-roslina-doniczkowa-do-wewnatrz-na-zewnatrz-monstera__0990297_pe819189_s5.jpg') 0% 0% no-repeat padding-box;*/
-    /*box-shadow: 0px 3px 6px #291D164D;*/
-    /*border: 2px solid #1D3811BD;*/
-
-}
 
 main>.plants>div>#plantname {
     grid-row: 7/10;

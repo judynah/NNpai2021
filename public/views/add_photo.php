@@ -33,7 +33,6 @@
 
                 </form>
             </div>
-            <!--                <img src="../img/plants/pl1.jpg">-->
             <div class="plant-name">plant_name</div>
         </section>
 

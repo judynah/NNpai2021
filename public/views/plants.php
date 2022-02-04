@@ -14,10 +14,11 @@
                 <?php foreach($plants as $plant):?>
                 <div class="plant1">
                     <div id="img">
-                         <img src="public/uploads/<?=$plant->getImage();?>" >
+                         <img src="public/uploads/<?=$plant['image'] ;?>" >
                     </div>
                     <div id="plantname">
-                        <a href="treatment" class="button"><?= $plant->getName();?></a>
+                        <? $_SESSION['id_plant'] = $plant['id_plant'] ; ?>
+                        <a href="treatment" class="button"><?= $plant['name'];?></a>
                     </div>
 
                 </div>

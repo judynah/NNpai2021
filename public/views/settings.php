@@ -17,7 +17,7 @@
 
         <section class="settings-container">
             <div id="content">
-                <form class="settings" action="settings" method="POST" ENCTYPE="multipart/form-data">
+                <form class="settings" action="settings" method="POST"" ENCTYPE="multipart/form-data">
 
                     <div class="messages">
                         <?php
@@ -51,7 +51,7 @@
                                     </li>
                                     <li>
                                         <h2> Photo </h2>
-                                        <input id="settings-photo" name="file"  type="file"  placeholder="photo">
+                                        <input id="settings-photo"  name="file"  type="file" placeholder="photo" ><br/>
                                     </li>
 
                                 </div>
@@ -88,13 +88,15 @@
                                 <li>
                                     <h2> New Password</h2>
                                     <input id="setting-password" name="password" type="password" placeholder="password"
-                                           pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{5,}$" title="Password must contain lower case, upper case letter and at least one number">
+                                           pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{5,}$" title="Password must contain lower case, upper case letter and at least one number"
+                                           readonly onfocus="this.removeAttribute('readonly');">
 
                                 </li>
                                 <li>
                                     <h2>Confirm password</h2>
                                     <input id="setting-confirm-password" name="confirmed_password" type="password" placeholder="conform-password"
-                                           pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{5,}$" title="Password must contain lower case, upper case letter and at least one number">
+                                           pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{5,}$" title="Password must contain lower case, upper case letter and at least one number"
+                                           readonly onfocus="this.removeAttribute('readonly');">
                                 </li>
                                 <li>
                                     <button type="submit" value="settings">Update</button>

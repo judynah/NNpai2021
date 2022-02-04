@@ -38,10 +38,8 @@ class UserRepository extends Repository
         );
     }
 
-    public function getUsers() :array
+    public function getUsers()
     {
-
-        $result = [];
         $stmt = $this->database->connect()->prepare('
             SELECT * FROM public."Users" u 
             LEFT JOIN public."UserInfo" ui
@@ -51,24 +49,43 @@ class UserRepository extends Repository
         $stmt->execute();
         $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        foreach($users as $user){
-            $result[] = new User(
-                $user['email'],
-                $user['password'],
-                $user['name'],
-                $user['surname'],
-                $user['date_of_birth'],
-                $user['city'],
-                $user['postcode'],
-                $user['street'],
-                $user['house_number'],
-                $user['apartment_number'],
-                $user['phone_number'],
-                $user['photo']
-            );
-        }
-        return $result;
+//        $id_user = $this->getPlantUserId($user);
+
+        return $users;
+
     }
+
+//    public function getUsers() :array
+//    {
+//
+//        $result = [];
+//        $stmt = $this->database->connect()->prepare('
+//            SELECT * FROM public."Users" u
+//            LEFT JOIN public."UserInfo" ui
+//            ON u.id_user_info = ui."id_userInfo"
+//        ');
+//
+//        $stmt->execute();
+//        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//
+//        foreach($users as $user){
+//            $result[] = new User(
+//                $user['email'],
+//                $user['password'],
+//                $user['name'],
+//                $user['surname'],
+//                $user['date_of_birth'],
+//                $user['city'],
+//                $user['postcode'],
+//                $user['street'],
+//                $user['house_number'],
+//                $user['apartment_number'],
+//                $user['phone_number'],
+//                $user['photo']
+//            );
+//        }
+//        return $result;
+//    }
 
     public function addUser(User $user){
         $stmt = $this->database->connect()->prepare('
@@ -152,10 +169,11 @@ class UserRepository extends Repository
     {
         $id = $this->getUserId($user);
         $id_info = $this->getUserInfoId($user);
+        $user->setPhoto($photo);
 
         $stmt = $this->database->connect()->prepare('
             UPDATE public."UserInfo"  u 
-            SET name=?, surname=?, date_of_birth=?, photo=?, phone_number=?, city=?, postcode=?, street=?,
+            SET name=?, surname=?, date_of_birth=?, phone_number=?, photo=?, city=?, postcode=?, street=?,
             house_number=?, apartment_number=? 
             WHERE u."id_userInfo" = ? ;
         ');
@@ -164,8 +182,8 @@ class UserRepository extends Repository
             $name,
             $surname,
             $dateOfBirth,
-            $photo,
             $phoneNumber,
+            $photo,
             $city,
             $postcode,
             $street,
@@ -173,6 +191,9 @@ class UserRepository extends Repository
             $apartment_number,
             $id_info
         ]);
+
+
+
 
         $stmt = $this->database->connect()->prepare('
             UPDATE public."Users" u
@@ -184,6 +205,18 @@ class UserRepository extends Repository
             $password,
             $id
         ]);
+
+        $user->setName($name);
+        $user->setSurname($surname);
+        $user->setDateOfBirth($dateOfBirth);
+        $user->setCity($city);
+        $user->setPostcode($postcode);
+        $user->setStreet($street);
+        $user->setHouseNumber($house_number);
+        $user->setApartmentNumber($apartment_number);
+        $user->setPhoneNumber($phoneNumber);
+        $user->setPassword($password);
+        $user->setPhoto($photo);
     }
 
 

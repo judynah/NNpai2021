@@ -93,9 +93,9 @@ main>section  {
 }
 main>header {
     text-align: center;
-    text-justify: auto;
+    vertical-align: center;
     
-    font: normal normal normal 35px/43px Ink Free;
+    font: normal normal normal 4vh/8vh Ink Free;
     letter-spacing: 1.4px;
     color: #000000;
     opacity: 1;
