@@ -3,7 +3,7 @@
 
 
 ## Podstawowe informacje
-Projekt w zamyśle prezentuje aplikacje, która ma na celu przypominanie o cyklicznej pielęgnacji roślin,  zawiera historyczne na temat pielęgnacji konkretnych roślin oraz umożlwia dzielenie się poradami pomiędzy różnymi użytkownikami.
+Projekt w zamyśle prezentuje aplikacje, która ma na celu przypominanie o cyklicznej pielęgnacji roślin.  Zawiera ona informacje oraz dane historyczne na temat pielęgnacji konkretnych roślin oraz umożlwia dzielenie się poradami pomiędzy różnymi użytkownikami.
 
 
 ## Opis 
